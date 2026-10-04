@@ -43,6 +43,7 @@ function badges(){return [
  {id:'xp',title:'В потоке',desc:'Набери 1000 XP',icon:'flame',earned:totalXP()>=1000},
  {id:'reader',title:'Внимательный',desc:'Выполни 25 заданий на чтение',icon:'book',earned:C.lessons.flatMap(l=>l.tasks.map((t,i)=>['read','vocab'].includes(t.type)&&state.awards[uid(l,i)]>0)).filter(Boolean).length>=25},
  {id:'ten',title:'Десять историй',desc:'Заверши 10 разных эпизодов',icon:'star',earned:completedCount()>=10},
+ ...window.PLUSH_COLLECTION.badges(state),
  {id:'all',title:'Последний кадр',desc:'Пройди все эпизоды',icon:'award',earned:completedCount()===C.lessons.length}
  ];}
 function syncHeader(){document.getElementById('header-xp').textContent=totalXP()+' XP';document.body.classList.toggle('reduce-motion',!state.settings.motion);}
