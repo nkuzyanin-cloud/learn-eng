@@ -20,3 +20,13 @@ body.reduce-motion .profile-shelf .plush-slot.owned:hover{transform:translateY(-
 .reference-home .hero{min-height:300px}.reference-home .today-finished{min-height:160px}
 @media(max-width:380px){.reference-home .hero{min-height:285px}.reference-home .today-finished{min-height:150px}}
 @media(min-width:761px){.reference-home .hero{min-height:370px}.reference-home .today-finished{min-height:210px}}
+/* Each opaque foot meets the photographed wood surface, rather than the sprite box edge. */
+.profile-shelf.plush-shelf-three{display:block}
+.profile-shelf .plush-slot,.profile-shelf .shelf-empty{position:absolute;left:calc(11% + var(--slot)*26%);top:69.7%;bottom:auto;width:26%;height:auto;aspect-ratio:1;transform:translateY(var(--foot-offset));isolation:isolate;transition:none}
+.profile-shelf .plush-slot:before{content:'';position:absolute;left:19%;width:62%;height:6%;top:var(--foot);transform:translateY(-45%);background:radial-gradient(ellipse,#1d100ae0 0%,#20120a85 35%,transparent 72%);border-radius:50%;filter:blur(.65px);z-index:-1;pointer-events:none}
+.profile-shelf .plush-slot .plush-art{filter:brightness(.95) saturate(.9) sepia(.12) contrast(1.02) drop-shadow(1px 1px 1px #30160645);transition:filter .18s ease}
+.profile-shelf .plush-slot.owned:hover,.profile-shelf .plush-slot:active,body.reduce-motion .profile-shelf .plush-slot.owned:hover{transform:translateY(var(--foot-offset))}
+.profile-shelf .plush-slot.owned:hover .plush-art{filter:brightness(.99) saturate(.9) sepia(.12) contrast(1.02) drop-shadow(1px 1px 1px #30160645)}
+.profile-shelf .plush-slot:active .plush-art{opacity:.88}
+.profile-shelf .shelf-environment{filter:saturate(.82) brightness(.98)}
+@media(prefers-reduced-motion:reduce){.profile-shelf .plush-slot.owned:hover{transform:translateY(var(--foot-offset))}.profile-shelf .plush-slot .plush-art{transition:none}}
