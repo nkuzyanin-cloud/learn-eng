@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "scope": "Removal of games and verified unused files/code; learning content preserved",
+  "scope": "Removal of games/unused code; daily lesson limit removed; learning content preserved",
   "content": {
     "lessons": 82,
     "modules": 15,
@@ -31,13 +31,20 @@
     "All obsolete game links and unknown routes recover to the home page",
     "Export/import round trip, import of old game backup, invalid JSON, cancel reset and escaped names passed",
     "Before/after layout dimensions match on 8 core screens (navigation excluded)",
-    "Full guided lesson: theory, wrong answer/hint, reload of passed step, every practice step, personal writing, XP, daily limit and single tomorrow label",
+    "Full guided lesson: theory, wrong answer/hint, reload of passed step, every practice step, personal writing, XP",
     "Four-step practice grants one stable toy; completion survives collection/reload; repeat grants no duplicate reward or XP",
     "Rules and conversation open only for completed lessons; conversation prompt and copy button work",
     "Mixed/listening/correction/rewrite drills: answers, drafts after reload, completion and history without extra XP",
     "On the next learning day all 3 previous-topic warmups precede new theory",
     "70 screen/width combinations: no horizontal overflow, one active nav item, four equal nav columns",
-    "Offline core routes/images/plush load; cached MP3 byte range is 206/1024 bytes"
+    "Offline core routes/images/plush load; cached MP3 byte range is 206/1024 bytes",
+    "Old installed PWA updated without data loss; all 81 remaining lessons available despite a lesson completed today",
+    "Completed lessons 1 and 2 on the same day through real controls; prior XP preserved and next episode link appears",
+    "Third lesson starts immediately with recap of lesson 2; unfinished warmup survives reload and cannot be overwritten by another lesson",
+    "Repeating a lesson grants no extra XP; two lessons during one day count as one active day",
+    "All 82 lessons complete: no misleading next-episode link",
+    "Updated screens have no horizontal overflow on four phone/tablet/desktop widths",
+    "Immediate next lesson also works offline after service-worker update"
   ],
   "browserErrors": [],
   "missingRuntimeFiles": [],
@@ -45,5 +52,6 @@
     "Chromium tested; physical iPhone/Android and Safari not tested",
     "Local browser storage; no server synchronization",
     "created metadata retains original validator behaviour (renewed on validation), not a learning progress field"
-  ]
+  ],
+  "dailyLessonLimit": false
 }
