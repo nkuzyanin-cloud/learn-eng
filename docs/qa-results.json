@@ -1,16 +1,49 @@
 {
   "passed": true,
-  "checks": [
-    "Content: 82 lessons / 15 modules / 718 exercises, consistent keys and options",
-    "Contractions, punctuation and invalid imports validated",
-    "Wrong answers → review queue → correct answer removes item without extra XP",
-    "Completed 3 lessons through real controls, every exercise format, accurate XP and achievements",
-    "Replay and rapid next clicks do not duplicate XP or skip exercises",
-    "Text fallback persists after reload and gives no listening XP",
-    "Profile: escaped names, export, valid/invalid import, cancel reset",
-    "No horizontal overflow: 25 screens at 320 / 375 / 390 / 768 / 1440 pixels",
-    "Transition intermediate state and completed state; reduced motion honoured",
-    "GitHub subpath and offline reload passed; cached MP3 supports byte ranges"
+  "scope": "Removal of games and verified unused files/code; learning content preserved",
+  "content": {
+    "lessons": 82,
+    "modules": 15,
+    "legacyTasks": 718,
+    "guidedTasks": 650,
+    "practiceTasks": 328,
+    "warmupTasks": 246,
+    "rules": 65,
+    "drillTasks": 325,
+    "toys": 84,
+    "audioFiles": 76,
+    "assetsUnchanged": 115,
+    "cachedFiles": 130,
+    "removedFiles": 45
+  },
+  "staticChecks": [
+    "All JavaScript syntax",
+    "All academic data and remaining assets byte-identical to input",
+    "All course IDs and bank lengths",
+    "All task keys and choices",
+    "Every remaining runtime asset referenced",
+    "Every service worker URL exists",
+    "No game runtime/data/navigation/assets remain",
+    "All image resources decoded; MP3 and font headers validated"
   ],
-  "browserErrors": []
+  "browserChecks": [
+    "Old PWA cache upgraded at /english/; game state and reward cache removed; ALL learning save fields/XP/toy identities retained",
+    "All obsolete game links and unknown routes recover to the home page",
+    "Export/import round trip, import of old game backup, invalid JSON, cancel reset and escaped names passed",
+    "Before/after layout dimensions match on 8 core screens (navigation excluded)",
+    "Full guided lesson: theory, wrong answer/hint, reload of passed step, every practice step, personal writing, XP, daily limit and single tomorrow label",
+    "Four-step practice grants one stable toy; completion survives collection/reload; repeat grants no duplicate reward or XP",
+    "Rules and conversation open only for completed lessons; conversation prompt and copy button work",
+    "Mixed/listening/correction/rewrite drills: answers, drafts after reload, completion and history without extra XP",
+    "On the next learning day all 3 previous-topic warmups precede new theory",
+    "70 screen/width combinations: no horizontal overflow, one active nav item, four equal nav columns",
+    "Offline core routes/images/plush load; cached MP3 byte range is 206/1024 bytes"
+  ],
+  "browserErrors": [],
+  "missingRuntimeFiles": [],
+  "limits": [
+    "Chromium tested; physical iPhone/Android and Safari not tested",
+    "Local browser storage; no server synchronization",
+    "created metadata retains original validator behaviour (renewed on validation), not a learning progress field"
+  ]
 }
