@@ -1,0 +1,29 @@
+/* One warm light pulse, around the emblem. No full-screen white strobe. */
+dialog.level-up{position:fixed;inset:0;width:100%;height:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--ink);overflow:auto;overscroll-behavior:contain}
+dialog.level-up::backdrop{background:#100d18c9;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+dialog.level-up[open]{display:flex;flex-direction:column;align-items:center;padding:calc(24px + env(safe-area-inset-top)) 24px calc(24px + env(safe-area-inset-bottom))}
+.lu-stage{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;flex-shrink:0;margin:auto 0;width:min(100%,360px);text-align:center;padding:22px 0;animation:none}
+.lu-stage:before{content:'';position:absolute;inset:8% 0 15%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 30%,#69492724,transparent 65%)}
+.lu-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.3px;text-transform:uppercase;color:#cbb493;margin:0 0 22px}
+.lu-emblem{position:relative;display:grid;place-items:center;width:222px;height:222px;isolation:isolate}
+.lu-emblem .lu-avatar{position:absolute;inset:11px;width:200px;height:200px;margin:0;will-change:transform,opacity;z-index:2}
+.lu-emblem .level-initial,.lu-emblem .rank-1 .level-initial,.lu-emblem .rank-4 .level-initial{font-size:63px;max-width:94px}
+.lu-emblem .lu-new{opacity:0}
+.lu-halo{position:absolute;inset:-33px;z-index:0;background:radial-gradient(circle,#edb9622b,transparent 64%);opacity:.22;pointer-events:none}
+.lu-orbit{position:absolute;inset:4px;border:1px solid #f5bd655e;border-radius:50%;opacity:0;box-shadow:0 0 24px #f5b54f26,inset 0 0 14px #f5b54f13;pointer-events:none}
+.lu-flash{position:absolute;inset:-28px;z-index:3;opacity:0;pointer-events:none;background:radial-gradient(circle,#fff3ce 0%,#ffe4a8bf 11%,#edb55d66 27%,#e7a94e15 48%,transparent 67%)}
+.lu-particles{position:absolute;inset:0;z-index:4;pointer-events:none}
+.lu-particles i{position:absolute;left:calc(50% - 2px);top:calc(50% - 2px);width:4px;height:4px;background:#ffdb8e;opacity:0;box-shadow:0 0 7px #ffcb7199;border-radius:1px;transform:rotate(var(--angle)) translateY(-66px)}
+.lu-name{font-size:15px;line-height:1.4;color:#cbbfcf;margin:18px 0 6px;overflow-wrap:anywhere;max-width:100%}
+#level-up #lu-title{font-size:38px;line-height:1.15;letter-spacing:-1px;margin:0;color:#ffe4ac;text-shadow:0 2px 22px #efb85119}
+.lu-subtitle{font-size:13px;color:#b7a5c1;line-height:1.4;min-height:19px;margin:12px 0 25px}
+.lu-progress{position:relative;height:8px;width:100%;border-radius:10px;background:#312638;box-shadow:inset 0 0 0 1px #bfa0cf18;overflow:hidden;isolation:isolate}
+.lu-progress>span{display:block;position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,#d9973a,#ffd48b);box-shadow:inset 0 1px 0 #fff2cc70;transform-origin:left center;will-change:transform}
+.lu-progress>i{position:absolute;inset:0;width:40%;background:linear-gradient(90deg,transparent,#fff1cc90,transparent);opacity:0;pointer-events:none}
+.lu-detail{font-size:12px;line-height:1.6;color:#cec0d5;min-height:20px;margin:10px 0 0}
+.lu-earned{font-size:11px;color:#a995b3;line-height:1.4;margin:5px 0 30px}
+#level-up .lu-continue{width:100%;min-height:50px;padding:14px 20px;border-radius:14px;background:linear-gradient(110deg,#f8c56e,#efae4b);box-shadow:0 6px 25px #0004;font-size:15px;gap:14px;justify-content:center}
+.lu-continue svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lu-continue:focus-visible{outline:2px solid #ffe6ab;outline-offset:5px}
+@media(max-width:359px),(max-height:640px){.lu-emblem{width:184px;height:184px}.lu-emblem .lu-avatar{inset:12px;width:160px;height:160px}.lu-emblem .level-initial,.lu-emblem .rank-1 .level-initial,.lu-emblem .rank-4 .level-initial{font-size:49px}.lu-eyebrow{margin-bottom:14px}.lu-stage{padding:8px 0}.lu-subtitle{margin-bottom:19px}.lu-earned{margin-bottom:22px}#level-up #lu-title{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.lu-emblem .lu-avatar,.lu-progress>span{will-change:auto}}
