@@ -1,9 +1,26 @@
 {
   "passed": true,
-  "version": "level-up-animation",
-  "cacheVersion": "09897d8312c8",
+  "version": "lesson-navigation-fix",
+  "cacheVersion": "5e69f492821a",
   "reports": {
-    "celebration": {
+    "lessonNavigation": {
+      "passed": true,
+      "checks": [
+        "Exact screenshot scenario reproduced at 730 XP; installed update parks old v2-01 unchanged, restores first-module home/lesson 6 and preserves all earned progress",
+        "Lesson 6 starts from its card; switching to advanced and back preserves both exact attempts and warmup draft across reload without new XP",
+        "Three simultaneous lesson drafts remain separate; no unfinished-lesson gate",
+        "Full lesson 6 completes first module, awards exact 135 XP and level 2 once; next episode is v1-07, advanced draft remains saved",
+        "Real export/import retains all parked drafts, focus, XP, level celebration history and old collection/writing",
+        "Explicit start setting works in both directions and parks the current attempt instead of deleting it or blocking other lessons",
+        "All 82 lesson cards remain accessible with saved attempts, without Closed labels or hidden lock screens",
+        "Finishing an old paused attempt cannot repeat a level already revealed by another lesson",
+        "Offline card selection and reload restore the chosen parked lesson",
+        "20 page-width combinations have no horizontal overflow"
+      ],
+      "browserErrors": [],
+      "missing": []
+    },
+    "celebrationRegression": {
       "passed": true,
       "checks": [
         "Actual final task awards XP once, survives reload before finish, animates 3→4 with new frame and exact 7 XP remainder; completion saved first; dismiss/reload never repeats",
@@ -25,24 +42,7 @@
         "Blocked sessionStorage cannot prevent saved completion or level reveal; current in-memory recap wins over old recap",
         "Missing Web Animations API falls back to final reward screen with no blocking",
         "Level-up works offline with cached script, styles and original frame assets",
-        "Immediately previous installed PWA upgrades from 147 to 149 cached files, preserves all saved fields and does not celebrate old XP"
-      ],
-      "browserErrors": [],
-      "missing": []
-    },
-    "levelsRegression": {
-      "passed": true,
-      "checks": [
-        "Installed previous PWA upgrades; confirmed missing listen XP restored once; old XP, writings, toys, settings and completed lessons preserved",
-        "Two real lessons complete on same day; all tasks including text-mode listen earn XP after correction; no free-writing task; warmup earns none; passed answer survives reload",
-        "Full lesson replay has no writing task and cannot grant any extra XP",
-        "Old unfinished writing step completes safely, preserving draft in archive and stable task IDs",
-        "Old last checked-task draft is preserved and completes directly into recap",
-        "All 15 exact thresholds and all six ranks calculated; seed XP counted; full course reaches 16 with no imaginary next level",
-        "Level-10 reference rendered; exact achievement art shared between profile and achievement catalog; all profile links work",
-        "Actual JSON export and import preserve level, XP, old journal, toy assignments, activity and settings",
-        "60 page-width combinations plus long names: no horizontal overflow",
-        "All six frames decode with transparent centers; max-level profile and lessons work offline"
+        "Immediately previous installed PWA upgrades from 149 to 149 cached files with a new version, preserves all saved fields and does not celebrate old XP"
       ],
       "browserErrors": [],
       "missing": []
