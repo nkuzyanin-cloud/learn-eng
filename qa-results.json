@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "moduleUpdate": {
+    "passed": true,
+    "lessons": 82,
+    "modules": 15,
+    "uniqueCovers": 15,
+    "newImages": 7,
+    "cachedFiles": 138,
+    "academicDataUnchanged": true,
+    "checks": [
+      "JavaScript syntax",
+      "15 distinct image paths and distinct image contents",
+      "All 82 IDs belong to exactly one module",
+      "Academic data and exercise engines byte-identical",
+      "All runtime references and cache addresses exist",
+      "All module covers cached"
+    ]
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "Installed PWA upgrades to new module catalog without changing progress, XP, collection, journal, or unfinished warmup",
+      "All 82 lessons verified in their 15 modules; covers unique across modules and identical within each module; progress counts correct",
+      "Catalog grouping, filters, filter reload, empty states, and invalid module links behave correctly",
+      "Completed module filter and achievement condition preserved; lesson links restore drafts; daily cap remains removed and unfinished draft protection remains",
+      "Lesson, practice and speaking/archive navigation uses the same module artwork with correct descriptions",
+      "Practice with new module cover completes all four tasks; stable toy reward and repeat preserved without extra XP",
+      "120 phone/tablet/desktop screen checks: no horizontal overflow, active navigation consistent, all images decode",
+      "All 15 module covers and updated catalog available offline after app update"
+    ],
+    "browserErrors": [],
+    "missing": []
+  },
+  "lessonFlowRegression": {
+    "passed": true,
+    "checks": [
+      "Old installed PWA updated without data loss; all 81 remaining lessons available despite a lesson completed today",
+      "Completed lessons 1 and 2 on the same day through real controls; prior XP preserved and next episode link appears",
+      "Third lesson starts immediately with recap of lesson 2; unfinished warmup survives reload and cannot be overwritten by another lesson",
+      "Repeating a lesson grants no extra XP; two lessons during one day count as one active day",
+      "All 82 lessons complete: no misleading next-episode link",
+      "Updated screens have no horizontal overflow on four phone/tablet/desktop widths",
+      "Immediate next lesson also works offline after service-worker update"
+    ],
+    "browserErrors": [],
+    "missing": []
+  }
+}
