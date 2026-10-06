@@ -1,57 +1,56 @@
 {
   "passed": true,
-  "scope": "Removal of games/unused code; daily lesson limit removed; learning content preserved",
-  "content": {
-    "lessons": 82,
-    "modules": 15,
-    "legacyTasks": 718,
-    "guidedTasks": 650,
-    "practiceTasks": 328,
-    "warmupTasks": 246,
-    "rules": 65,
-    "drillTasks": 325,
-    "toys": 84,
-    "audioFiles": 76,
-    "assetsUnchanged": 115,
-    "cachedFiles": 130,
-    "removedFiles": 45
-  },
-  "staticChecks": [
-    "All JavaScript syntax",
-    "All academic data and remaining assets byte-identical to input",
-    "All course IDs and bank lengths",
-    "All task keys and choices",
-    "Every remaining runtime asset referenced",
-    "Every service worker URL exists",
-    "No game runtime/data/navigation/assets remain",
-    "All image resources decoded; MP3 and font headers validated"
-  ],
-  "browserChecks": [
-    "Old PWA cache upgraded at /english/; game state and reward cache removed; ALL learning save fields/XP/toy identities retained",
-    "All obsolete game links and unknown routes recover to the home page",
-    "Export/import round trip, import of old game backup, invalid JSON, cancel reset and escaped names passed",
-    "Before/after layout dimensions match on 8 core screens (navigation excluded)",
-    "Full guided lesson: theory, wrong answer/hint, reload of passed step, every practice step, personal writing, XP",
-    "Four-step practice grants one stable toy; completion survives collection/reload; repeat grants no duplicate reward or XP",
-    "Rules and conversation open only for completed lessons; conversation prompt and copy button work",
-    "Mixed/listening/correction/rewrite drills: answers, drafts after reload, completion and history without extra XP",
-    "On the next learning day all 3 previous-topic warmups precede new theory",
-    "70 screen/width combinations: no horizontal overflow, one active nav item, four equal nav columns",
-    "Offline core routes/images/plush load; cached MP3 byte range is 206/1024 bytes",
-    "Old installed PWA updated without data loss; all 81 remaining lessons available despite a lesson completed today",
-    "Completed lessons 1 and 2 on the same day through real controls; prior XP preserved and next episode link appears",
-    "Third lesson starts immediately with recap of lesson 2; unfinished warmup survives reload and cannot be overwritten by another lesson",
-    "Repeating a lesson grants no extra XP; two lessons during one day count as one active day",
-    "All 82 lessons complete: no misleading next-episode link",
-    "Updated screens have no horizontal overflow on four phone/tablet/desktop widths",
-    "Immediate next lesson also works offline after service-worker update"
-  ],
-  "browserErrors": [],
-  "missingRuntimeFiles": [],
-  "limits": [
-    "Chromium tested; physical iPhone/Android and Safari not tested",
-    "Local browser storage; no server synchronization",
-    "created metadata retains original validator behaviour (renewed on validation), not a learning progress field"
-  ],
-  "dailyLessonLimit": false
+  "version": "levels-profile",
+  "reports": {
+    "levels": {
+      "passed": true,
+      "checks": [
+        "Installed previous PWA upgrades; confirmed missing listen XP restored once; old XP, writings, toys, settings and completed lessons preserved",
+        "Two real lessons complete on same day; all tasks including text-mode listen earn XP after correction; no free-writing task; warmup earns none; passed answer survives reload",
+        "Full lesson replay has no writing task and cannot grant any extra XP",
+        "Old unfinished writing step completes safely, preserving draft in archive and stable task IDs",
+        "Old last checked-task draft is preserved and completes directly into recap",
+        "All 15 exact thresholds and all six ranks calculated; seed XP counted; full course reaches 16 with no imaginary next level",
+        "Level-10 reference rendered; exact achievement art shared between profile and achievement catalog; all profile links work",
+        "Actual JSON export and import preserve level, XP, old journal, toy assignments, activity and settings",
+        "60 page-width combinations plus long names: no horizontal overflow",
+        "All six frames decode with transparent centers; max-level profile and lessons work offline"
+      ],
+      "browserErrors": [],
+      "missing": []
+    },
+    "static": {
+      "passed": true,
+      "checks": [
+        "All JS syntax valid",
+        "82 lessons retain stable task data and indices; 568 current checked tasks, no reflection in either task stream",
+        "16 levels with exact cumulative module XP thresholds",
+        "Conservative missing listen-award recovery tested for completed, passed, future, unpassed and theory cursors; idempotent",
+        "Academic data, practice, warmups, grading, collection and module cover files byte-identical",
+        "All 147 service-worker URLs exist and include every new runtime asset"
+      ]
+    },
+    "modules": {
+      "passed": true,
+      "checks": [
+        "Installed PWA upgrades to new module catalog without changing progress, XP, collection, journal, or unfinished warmup",
+        "All 82 lessons verified in their 15 modules; covers unique across modules and identical within each module; progress counts correct",
+        "Catalog grouping, filters, filter reload, empty states, and invalid module links behave correctly",
+        "Completed module filter and achievement condition preserved; lesson links restore drafts; daily cap remains removed and unfinished draft protection remains",
+        "Lesson, practice and speaking/archive navigation uses the same module artwork with correct descriptions",
+        "Practice with new module cover completes all four tasks; stable toy reward and repeat preserved without extra XP",
+        "120 phone/tablet/desktop screen checks: no horizontal overflow, active navigation consistent, all images decode",
+        "All 15 module covers and updated catalog available offline after app update"
+      ],
+      "browserErrors": [],
+      "missing": []
+    },
+    "allLessons": {
+      "passed": true,
+      "checks": [
+        "82 of 82 lessons: final checked task has exact counter, awards XP, and completes immediately without reflection"
+      ],
+      "browserErrors": []
+    }
+  }
 }
