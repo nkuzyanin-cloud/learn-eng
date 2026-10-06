@@ -1,8 +1,36 @@
 {
   "passed": true,
-  "version": "levels-profile",
+  "version": "level-up-animation",
+  "cacheVersion": "09897d8312c8",
   "reports": {
-    "levels": {
+    "celebration": {
+      "passed": true,
+      "checks": [
+        "Actual final task awards XP once, survives reload before finish, animates 3→4 with new frame and exact 7 XP remainder; completion saved first; dismiss/reload never repeats",
+        "All 15 level boundaries through real lesson finish: correct ranks, unchanged-rank wording, max level; app motion-off displays final state immediately",
+        "Lesson without a level change has normal recap",
+        "Entire replay has zero new XP and zero level celebration",
+        "A threshold already crossed earlier in a saved lesson is still celebrated at finish after reload",
+        "Full new lesson from theory through every checked task captures its own start XP and reveals level 4 with exact remainder",
+        "Old in-progress save without baseline does not retrospectively celebrate previous XP; baseline is established on resume",
+        "OS reduced motion has no animation or flash; Escape releases dialog and scroll lock",
+        "Immediate Continue cancels safely with no delayed reappearance or stray animation",
+        "Reload during the active effect preserves XP and completed lesson and never queues a duplicate celebration",
+        "Browser route change cancels effect and unlocks underlying profile without changing XP",
+        "Backgrounding during reveal settles cleanly to final frame; no frozen flash on return",
+        "Multiple crossed levels display one final-level event",
+        "10 viewport combinations including small phones, landscape/tablet and long names: no horizontal overflow; Continue remains reachable",
+        "Rotated phone and extremely short viewport keep the heading visible and Continue scrollable",
+        "New session baseline persists through theory/reload and JSON validation",
+        "Blocked sessionStorage cannot prevent saved completion or level reveal; current in-memory recap wins over old recap",
+        "Missing Web Animations API falls back to final reward screen with no blocking",
+        "Level-up works offline with cached script, styles and original frame assets",
+        "Immediately previous installed PWA upgrades from 147 to 149 cached files, preserves all saved fields and does not celebrate old XP"
+      ],
+      "browserErrors": [],
+      "missing": []
+    },
+    "levelsRegression": {
       "passed": true,
       "checks": [
         "Installed previous PWA upgrades; confirmed missing listen XP restored once; old XP, writings, toys, settings and completed lessons preserved",
@@ -19,6 +47,13 @@
       "browserErrors": [],
       "missing": []
     },
+    "allLessons": {
+      "passed": true,
+      "checks": [
+        "82 of 82 lessons: final checked task has exact counter, awards XP, and completes immediately without reflection"
+      ],
+      "browserErrors": []
+    },
     "static": {
       "passed": true,
       "checks": [
@@ -27,30 +62,8 @@
         "16 levels with exact cumulative module XP thresholds",
         "Conservative missing listen-award recovery tested for completed, passed, future, unpassed and theory cursors; idempotent",
         "Academic data, practice, warmups, grading, collection and module cover files byte-identical",
-        "All 147 service-worker URLs exist and include every new runtime asset"
+        "All 149 service-worker URLs exist and include every new runtime asset"
       ]
-    },
-    "modules": {
-      "passed": true,
-      "checks": [
-        "Installed PWA upgrades to new module catalog without changing progress, XP, collection, journal, or unfinished warmup",
-        "All 82 lessons verified in their 15 modules; covers unique across modules and identical within each module; progress counts correct",
-        "Catalog grouping, filters, filter reload, empty states, and invalid module links behave correctly",
-        "Completed module filter and achievement condition preserved; lesson links restore drafts; daily cap remains removed and unfinished draft protection remains",
-        "Lesson, practice and speaking/archive navigation uses the same module artwork with correct descriptions",
-        "Practice with new module cover completes all four tasks; stable toy reward and repeat preserved without extra XP",
-        "120 phone/tablet/desktop screen checks: no horizontal overflow, active navigation consistent, all images decode",
-        "All 15 module covers and updated catalog available offline after app update"
-      ],
-      "browserErrors": [],
-      "missing": []
-    },
-    "allLessons": {
-      "passed": true,
-      "checks": [
-        "82 of 82 lessons: final checked task has exact counter, awards XP, and completes immediately without reflection"
-      ],
-      "browserErrors": []
     }
   }
 }
